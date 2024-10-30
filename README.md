@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔒 NextAuth Adapter for Next.js
 
-## Getting Started
+Welcome to the **NextAuth Adapter for Next.js**! This project provides an out-of-the-box solution to integrate **NextAuth (v5)** seamlessly into your Next.js application. Use this as a boilerplate to get authentication ready instantly. 🎉
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌐 **Social Connections (OAuth)**
+Easily connect and authenticate users via popular providers:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Google** 🔍
+- **GitHub** 🐙
+- **LinkedIn** 💼
+- **Microsoft** 🖥️
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*Custom Credentials* and *Database functionality* are coming soon! With upcoming **Database Adapter** support, you'll have a plug-and-play experience to connect to your database and manage authentication data effortlessly. Stay tuned for more updates and enhancements. 🔜
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Included Packages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Here's a quick overview of the packages used in this project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Package                        | Description |
+| ------------------------------ | ----------- |
+| `@radix-ui/react-avatar`       | Avatar components for user profiles and customization. |
+| `@radix-ui/react-dropdown-menu`| Dropdown menu components for interactive UI elements. |
+| `@radix-ui/react-icons`        | Icon library from Radix for consistent, high-quality icons. |
+| `@radix-ui/react-slot`         | A slot component for flexible component composition. |
+| `@types/jsonwebtoken`          | TypeScript types for `jsonwebtoken` to securely handle tokens. |
+| `class-variance-authority`     | Utility for managing conditional styling in Tailwind CSS. |
+| `clsx`                         | Utility for constructing className strings conditionally. |
+| `lucide-react`                 | Icon set designed for React to keep interfaces sleek and professional. |
+| `next`                         | Next.js framework for robust React applications. |
+| `next-auth`                    | NextAuth.js, the authentication library for Next.js, supporting OAuth, custom credentials, and more. |
+| `react`                        | Core React library. |
+| `react-dom`                    | React DOM utilities for component rendering. |
+| `react-google-button`          | Google Sign-in button component for seamless Google login integration. |
+| `tailwind-merge`               | Tailwind CSS utility to merge class names efficiently. |
+| `tailwindcss-animate`          | Animation utilities for Tailwind CSS to bring life to UI elements. |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Quick Start
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Clone this project and follow the setup instructions to integrate NextAuth into your Next.js app. Enjoy instant access to social authentication and other built-in features. 🔥
+
+Stay updated for upcoming features and updates!
+
+---
+
+Happy Coding! 😎
