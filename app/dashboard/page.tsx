@@ -3,7 +3,6 @@ import {
   getuserEmailFromSession,
   getUserFirstAndLastName,
   getUserImage,
-  fetchUserProfileFromGraphAPI,
   identifySocialProvider,
 } from "@/lib/user/functions";
 import UserView from "./UserView"; // Import the Client Component
@@ -15,16 +14,11 @@ export default async function DashboardView() {
     return null; // or redirect to another page
   }
 
-  // Fetch user details
+  // Fetch user details (move these to another file and export the values as an object?)
   const { firstName, lastName } = await getUserFirstAndLastName();
   const email = await getuserEmailFromSession();
   const userImage = await getUserImage();
   const provider = await identifySocialProvider();
-  const userInfo = await fetchUserProfileFromGraphAPI();
-
-  if (userInfo) {
-    console.log("Microsoft User Profile Info:", userInfo);
-  }
 
   // Pass the fetched data to the Client Component
   return (

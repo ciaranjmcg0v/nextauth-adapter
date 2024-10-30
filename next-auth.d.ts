@@ -14,3 +14,8 @@ declare module "next-auth" {
     provider?: string;
   }
 }
+
+export interface FullNameLastName {
+  firstName: string;
+  lastName: string;
+}

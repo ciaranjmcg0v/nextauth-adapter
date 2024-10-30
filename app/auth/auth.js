@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
+import LinkedIn from "next-auth/providers/linkedin";
 import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id";
-import { decodeAccessToken } from "@/lib/user/functions";
 
 export const {
   handlers: { GET, POST },
@@ -32,6 +32,15 @@ export const {
       tenantId: process.env.MICROSOFT_ENTRA_TENANT_ID, // Make sure you include this if required
       authorization: {
         params: {
+          scope: "openid profile email User.Read",
+        },
+      },
+    }),
+    LinkedIn({
+      clientId: process.env.LINKEDIN_ID,
+      clientSecret: process.env.LINKEDIN_SECRET,
+      authorization: {
+        params: {
           scope: "openid profile email",
         },
       },
@@ -52,11 +61,12 @@ export const {
       }
       return token;
     },
-    async session({ session, token }) {
+    async session({ session, token, account, profile }) {
       session.accessToken = token.accessToken; // Store access token in session
       session.account = {
         provider: token.provider,
       }; // Store provider info in session
+      console.log("session info", { session, token, account, profile });
       return session;
     },
   },

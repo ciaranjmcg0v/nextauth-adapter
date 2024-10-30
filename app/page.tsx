@@ -1,9 +1,10 @@
 "use client";
 
-import { githubLogin, googleLogin, microsoftLogin } from "./actions/authActions";
-import GithubButton from "./components/custom/GithubButton";
-import GoogleButton from "./components/custom/GoogleButton";
-import MicrosoftButton from "./components/custom/MicrosoftButton";
+import { githubLogin, googleLogin, linkedinLogin, microsoftLogin } from "./actions/authActions";
+import GithubButton from "../components/custom/SocialButtons/GithubButton";
+import GoogleButton from "../components/custom/SocialButtons/GoogleButton";
+import MicrosoftButton from "../components/custom/SocialButtons/MicrosoftButton";
+import LinkedInButton from "@/components/custom/SocialButtons/LinkedInButton";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <GoogleButton onClick={() => googleLogin()} />
       <GithubButton onClick={() => githubLogin()} />
       <MicrosoftButton onClick={() => microsoftLogin()} />
-      <MicrosoftButton onClick={() => microsoftLogin()} />
+      <LinkedInButton onClick={() => linkedinLogin()} />
     </div>
   );
 }
